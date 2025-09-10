@@ -10,6 +10,8 @@
 3. [Enable WSL and Virtual Machine Platform](#enable-wsl-and-virtual-machine-platform)
 4. [Check WSL Status and Update Kernel](#check-wsl-status-and-update-kernel)
 5. [Install a Linux Distribution](#install-a-linux-distribution)
+6. [Install Python and Ansible in WSL](#install-python-and-ansible-in-wsl)
+7. [Install Ansible](#install-ansible)
 
 ---
 
