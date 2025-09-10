@@ -1,10 +1,19 @@
 # Installing Ansible on Windows using WSL
 
-This guide provides step-by-step instructions to install Ansible on Windows using the Windows Subsystem for Linux (WSL).
+🚀 **This guide provides step-by-step instructions to install Ansible on Windows using the Windows Subsystem for Linux (WSL).**
 
 ---
 
-## System Information
+## 📖 Table of Contents
+1. [System Information](#system-information)
+2. [Check WSL Status](#check-wsl-status)
+3. [Enable WSL and Virtual Machine Platform](#enable-wsl-and-virtual-machine-platform)
+4. [Check WSL Status and Update Kernel](#check-wsl-status-and-update-kernel)
+5. [Install a Linux Distribution](#install-a-linux-distribution)
+
+---
+
+## 🖥️ System Information
 This guide is tested on the following system:
 
 ```plaintext
@@ -21,7 +30,7 @@ systeminfo.exe | Select-String 'OS Name','OS Version','BIOS Version'
 
 ---
 
-## Step 1: Check WSL Status
+## ✅ Check WSL Status
 Run the following commands in PowerShell to check if WSL is available and whether any distributions are installed:
 
 ```powershell
@@ -47,7 +56,7 @@ https://aka.ms/wslstore
 
 ---
 
-## Step 2: Enable WSL and Virtual Machine Platform
+## ⚙️ Enable WSL and Virtual Machine Platform
 Run the following command in an **Administrator PowerShell** to enable the required features:
 
 ```powershell
@@ -57,7 +66,7 @@ Run the following command in an **Administrator PowerShell** to enable the requi
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-### Running from VS Code
+### 💡 Running from VS Code
 If you are using the integrated terminal in VS Code, you need to run VS Code as an Administrator to execute the above command. Follow these steps:
 
 1. Close VS Code if it is already open.
@@ -68,7 +77,7 @@ If you are using the integrated terminal in VS Code, you need to run VS Code as 
    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
    ```
 
-### Restart Your System
+### 🔄 Restart Your System
 After enabling the features, restart your system to apply the changes:
 
 ```powershell
@@ -77,7 +86,7 @@ shutdown /r /t 0
 
 ---
 
-## Step 3: Check WSL Status and Update Kernel
+## 🔍 Check WSL Status and Update Kernel
 Before setting WSL2 as the default version, verify the WSL status and update the kernel if required.
 
 ### Check WSL Status
@@ -241,6 +250,8 @@ After installation, you can check the version of Ubuntu by launching the distrib
 lsb_release -a
 ```
 
+---
+
 ## Step 5: Launch WSL and Complete Setup
 Launch WSL and complete the initial setup by creating a username and password:
 
@@ -253,6 +264,8 @@ Once inside WSL, update the package manager:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
+---
 
 ## Step 6: Install Python and Ansible in WSL
 Install Python and Ansible inside the WSL environment:
